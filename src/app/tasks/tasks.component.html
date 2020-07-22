@@ -1,0 +1,66 @@
+
+
+<div class = 'table-responsive'>
+      
+    <div class="w3-container w3-black">
+        <div class='panel-heading'>
+            <h1> {{pageTitle}} </h1>
+        </div>
+    
+        <div class = 'panel-body'>
+            <div class = 'row'>
+                <div class = 'col-md-2'>
+                    Filter By: 
+                    <select class="selectpicker" (change)="selectChange($event)">
+                        <option value='title'>Title</option>
+                        <option value="id">ID</option>
+                    </select>
+                </div>
+                <div class = 'col-md-4'>
+                    <input type = 'text' [(ngModel)] = 'listFilter'>
+                </div>
+            </div>
+        </div>
+    <br>
+    </div>
+
+
+    <table class="table table-hover" *ngIf="allTasks?.length">
+        <thead class="thead-black" style="background-color: black;">
+          <tr>
+            <th scope="col" style="color: white;">ID</th>
+            <th scope="col" style="color: white;">Title</th>
+            <th scope="col" style="color: white;">Created On</th>
+            <th scope="col" style="color: white;">Completion Status</th>
+            <th ></th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ='let temp of filteredTasks'>
+                <td>
+                    {{temp.id}}
+                </td>
+               
+                <td>
+                    {{temp.title}}
+                </td>
+                
+                <td>
+                    {{temp.createdOn}}
+                </td>
+
+                <td>
+                    {{temp.completed}}
+                </td>
+                
+                <td>
+                    <a [routerLink]="['/update', temp.id]">
+                        <button mat-icon-button color="light-green" aria-label="delete icon">
+                            <mat-icon>Update</mat-icon>
+                          </button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+</div>

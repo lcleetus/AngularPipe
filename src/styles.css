@@ -1,0 +1,17 @@
+@font-face{
+    font-family:Gotham Bold; 
+    src: url(./assets/gotham/GothamBold.ttf);
+    font-family:Gotham Book; 
+    src: url(./assets/gotham/GothamBook.ttf);
+  }
+ 
+
+  
+
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f4e099;
+    position: relative;
+    z-index: -3;
+}
+

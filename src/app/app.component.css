@@ -1,0 +1,19 @@
+
+.jumbotron {
+    color: #dd6e6d;
+    background-color: #f4e099;
+    padding: 1%;
+    margin-left: 0%;
+}
+
+
+.nav-item {
+    padding: 0%;
+    margin-left: .5cm;
+    border-radius: 25px;
+}
+
+.toss {
+    position: relative;
+    z-index: -1;
+}
